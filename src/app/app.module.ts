@@ -14,16 +14,19 @@ import { AboutComponent } from './components/about/about.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { ElectronService } from './providers/electron.service';
+import { ConnectService } from './providers/connect.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-import {MdSidenavModule} from '@angular/material';
+import {MdSidenavModule, MdMenuModule, MdButtonModule, MdCardModule, MdIconModule, MdToolbarModule, MdListModule, MdGridListModule} from '@angular/material';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutComponent,
-    MenuComponent
+    MenuComponent,
+    ToolbarComponent
 
   ],
   imports: [
@@ -32,9 +35,16 @@ import {MdSidenavModule} from '@angular/material';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    MdSidenavModule
+    MdSidenavModule, 
+    MdMenuModule, 
+    MdButtonModule,
+    MdCardModule, 
+    MdIconModule,
+    MdToolbarModule,
+    MdListModule,
+    MdGridListModule
   ],
-  providers: [ElectronService],
+  providers: [ElectronService, ConnectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Http} from '@angular/http';
 import { Router } from '@angular/router';
+import { ConnectService} from '../../providers/connect.service';
 import 'rxjs/add/operator/map';
 
 @Component({
@@ -10,17 +11,19 @@ import 'rxjs/add/operator/map';
 })
 export class HomeComponent implements OnInit {
   title = `App works !`;
-  myStuff : any = '<p>Hello</p>';
+  items : any;
 
-  constructor(public http:Http, private router:Router) {
-    http.get('package.json').map(res => {
-      this.myStuff = res.json();
-      this.title = this.myStuff.description;
-    }).subscribe(stuff =>this.myStuff = stuff);
-    console.log('Yes, I am here', this.myStuff);
+  constructor(public http:Http, private router:Router, private connect:ConnectService) {
+    
    }
 
   ngOnInit() {
+    this.connect.getResource('/api/app').then(response => {
+      if (this.items == null) {
+        this.items = response.content;
+        
+      }
+    });
   }
 
 }

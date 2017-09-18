@@ -1,11 +1,15 @@
 <div class="container"> 
-<app-menu></app-menu>
    <span class="title">
     {{title}}
      </span>
- 
- <h3>
-  {{myStuff}}
- </h3>
-
+<div style="clear : both">
+    <md-grid-list style="width :600px;padding : 10px" cols="8" rowHeight="100px">
+  <h3 md-subheader>Folders</h3>
+<md-grid-tile *ngFor="let item of items"  [colspan]="4"
+         [rowspan]="1" >
+   <md-icon md-list-icon>folder</md-icon>
+    {{item.header.title}}
+</md-grid-tile>
+ </md-grid-list>
+</div>
 </div>
