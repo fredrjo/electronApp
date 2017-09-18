@@ -8,27 +8,31 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
+import { MenuComponent } from './components/menu/menu.component';
 import { AboutComponent } from './components/about/about.component';
 
 import { AppRoutingModule } from './app-routing.module';
 
 import { ElectronService } from './providers/electron.service';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-import { SlideMenuModule } from 'cuppa-ng2-slidemenu/cuppa-ng2-slidemenu';
+import {MdSidenavModule} from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    MenuComponent
 
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    SlideMenuModule
+    MdSidenavModule
   ],
   providers: [ElectronService],
   bootstrap: [AppComponent]
