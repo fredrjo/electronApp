@@ -1,7 +1,7 @@
 {
   "name": "angular-electron",
   "version": "1.8.0",
-  "description": "Angular 4 with Electron (Typescript + SASS + Hot Reload)",
+  "description": "EnerginetGoPro Dashboard",
   "homepage": "https://github.com/maximegris/angular-electron",
   "author": {
     "name": "Maxime GRIS",
@@ -44,6 +44,7 @@
     "@angular/platform-browser-dynamic": "4.3.5",
     "@angular/router": "4.3.5",
     "core-js": "2.4.1",
+    "cuppa-ng2-slidemenu": "^1.0.2",
     "enhanced-resolve": "3.3.0",
     "rxjs": "5.4.3",
     "zone.js": "0.8.17"

@@ -1,18 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import {Http} from '@angular/http';
-import { Router } from '@angular/router';
 import 'rxjs/add/operator/map';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-about',
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class AboutComponent implements OnInit {
   title = `App works !`;
   myStuff : any = '<p>Hello</p>';
   private menuItemsArray: any[] = [ 
-       {"title":"My users","link":"app-about"},
+       {"title":"My users","link":"about.component.html"},
        {"title": "My buildings","link":"#"},
        {"title":"Messages","link":"#",
        "subItems":[
@@ -36,11 +35,10 @@ export class HomeComponent implements OnInit {
     console.log("menu Opened");
   }
   private onItemSelect(item:any){
-    console.log('prepare');
-    this.router.navigateByUrl(item.link).then(res => console.log(res, item.link));
+    console.log(item);
   }
 
-  constructor(public http:Http, private router:Router) {
+  constructor(public http:Http) {
     http.get('package.json').map(res => {
       this.myStuff = res.json();
       this.title = this.myStuff.description;

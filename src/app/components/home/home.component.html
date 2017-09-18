@@ -1,5 +1,11 @@
-<div class="container">
-  <h1 class="title">
+<div class="container"> 
+
+   <cuppa-slidemenu style="float:right" [menulist]="menuItemsArray" (open)="onMenuOpen()" (close)="onMenuClose()" (onItemSelect)="onItemSelect($event)"></cuppa-slidemenu>
+   <span class="title">
     {{title}}
-  </h1>
+     </span>
+ 
+ <h3>
+  {{myStuff}}
+ </h3>
 </div>
