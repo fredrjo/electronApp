@@ -29,7 +29,7 @@ export class ConnectService{
     }
 
     getResource(resource){
-      let token ="zb6g3rw7k9tti59zgmq9abkbroongudf";
+      let token ="";
 
             return this.http.get(this.baseUrl+resource+'/',
                 { headers: this.getHeaders(token) }
@@ -51,7 +51,7 @@ export class ConnectService{
     }
 
     putResource(link, payload) {
-      let token ="zb6g3rw7k9tti59zgmq9abkbroongudf";
+      let token ="";
 
             return this.http.put(this.baseUrl+link, payload,
                 { headers: this.getHeaders(token) }
@@ -62,7 +62,7 @@ export class ConnectService{
     }
 
     postResource(link, payload) {
-      let token ="zb6g3rw7k9tti59zgmq9abkbroongudf";
+      let token ="";
 
             return this.http.post(this.baseUrl+link, payload,
                 { headers: this.getHeaders(token) }
@@ -75,7 +75,7 @@ export class ConnectService{
      }
 
      deleteResource(resource) {
-       let token ="zb6g3rw7k9tti59zgmq9abkbroongudf";
+       let token ="";
         
             return this.http.delete(this.baseUrl+resource+'/',
                 { headers: this.getHeaders(token) }
