@@ -63,7 +63,7 @@
     "cross-env": "5.0.5",
     "css-loader": "0.28.7",
     "cssnano": "3.10.0",
-    "electron": "1.7.6",
+    "electron": "1.8.2-beta",
     "electron-packager": "9.0.1",
     "electron-reload": "1.2.1",
     "exports-loader": "0.6.4",
